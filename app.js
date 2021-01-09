@@ -42,14 +42,15 @@ window.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("DOMContentLoaded", () => {
   let displaySlide = slideImg.map((slide) => {
     return (slides.innerHTML = `
-        <img srcset=${slide}>`);
+        <img srcset=${slide} class="pics">`);
   });
 
   displaySlide = displaySlide.join("");
   slides.innerHTML = displaySlide;
-  const img = document.querySelectorAll(".img-desktop");
+  const img = document.querySelectorAll(".pics");
   const nextBtn = document.querySelector(".next");
   const prevBtn = document.querySelector(".prev");
+  console.log(img);
 
   img.forEach((item, index) => {
     item.style.left = `${index * 100}%`;
@@ -66,6 +67,12 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   function carousel() {
+    if (counter === img.length) {
+      counter = 0;
+    }
+    if (counter < 0) {
+      counter = img.length - 1;
+    }
     img.forEach((item) => {
       item.style.transform = `translateX(-${counter * 100}%)`;
     });
@@ -78,6 +85,7 @@ window.addEventListener("DOMContentLoaded", () => {
 // const nextBtn = document.querySelector(".next");
 // const prevBtn = document.querySelector(".prev");
 
+// console.log(img);
 // img.forEach((item, index) => {
 //   item.style.left = `${index * 100}%`;
 // });

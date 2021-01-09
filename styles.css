@@ -129,6 +129,7 @@ nav img {
   display: flex;
   width: 100%;
   animation: slide 20s infinite linear;
+  animation-delay: 2s;
 }
 
 .slides-container img {
@@ -437,7 +438,8 @@ h6 {
 
   .img-desktop {
     display: flex;
-    animation: slide 20s infinite;
+    animation: slide 20s infinite linear;
+    animation-delay: 2s;
     /* transition: transform 60s ease-in; */
   }
 
@@ -542,17 +544,31 @@ h6 {
 }
 
 @keyframes slide {
-  20% {
+  0% {
+    transform: translateX(0%);
+  }
+  8.33% {
     transform: translateX(-100%);
   }
-  40% {
+  25% {
+    transform: translateX(-100%);
+  }
+
+  33.33% {
     transform: translateX(-200%);
   }
-  60% {
+  50% {
+    transform: translateX(-200%);
+  }
+
+  58.33% {
     transform: translateX(-300%);
   }
-  80% {
-    transform: translateX(-400%);
+  75% {
+    transform: translateX(-300%);
+  }
+  83.33% {
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(0%);
