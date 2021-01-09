@@ -438,7 +438,7 @@ h6 {
 
   .img-desktop {
     display: flex;
-    animation: slide 20s infinite linear;
+    animation: slide 18s infinite linear;
     animation-delay: 2s;
     /* transition: transform 60s ease-in; */
   }
@@ -547,27 +547,39 @@ h6 {
   0% {
     transform: translateX(0%);
   }
-  8.33% {
+  5.56% {
     transform: translateX(-100%);
   }
-  25% {
+  16.67% {
     transform: translateX(-100%);
   }
 
-  33.33% {
+  22.23% {
     transform: translateX(-200%);
+  }
+  33.34% {
+    transform: translateX(-200%);
+  }
+
+  38.90% {
+    transform: translateX(-300%);
   }
   50% {
-    transform: translateX(-200%);
-  }
-
-  58.33% {
     transform: translateX(-300%);
   }
-  75% {
-    transform: translateX(-300%);
+  55.56% {
+    transform: translateX(-400%);
   }
-  83.33% {
+  66.67% {
+    transform: translateX(-400%);
+  }
+  72.23% {
+    transform: translateX(-500%);
+  }
+  83.34% {
+    transform: translateX(-500%);
+  }
+  88.90% {
     transform: translateX(0%);
   }
   100% {

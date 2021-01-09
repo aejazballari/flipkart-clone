@@ -26,6 +26,8 @@ const slideImg = [
   "https://rukminim1.flixcart.com/flap/3376/560/image/43ff4418c513daf5.jpg?q=50 2x, https://rukminim1.flixcart.com/flap/1688/280/image/43ff4418c513daf5.jpg?q=50 1x",
   "https://rukminim1.flixcart.com/flap/3376/560/image/8cb56487bbda4c57.png?q=50 2x, https://rukminim1.flixcart.com/flap/1688/280/image/8cb56487bbda4c57.png?q=50 1x",
   "https://rukminim1.flixcart.com/flap/3376/560/image/0a6c51a2b24d62ec.jpg?q=50 2x, https://rukminim1.flixcart.com/flap/1688/280/image/0a6c51a2b24d62ec.jpg?q=50 1x",
+  "https://rukminim1.flixcart.com/flap/3376/560/image/ff938f15fd1feb73.jpg?q=50 2x, https://rukminim1.flixcart.com/flap/1688/280/image/ff938f15fd1feb73.jpg?q=50 1x",
+  "https://rukminim1.flixcart.com/flap/3376/560/image/2d1e642934186f79.jpg?q=50 2x, https://rukminim1.flixcart.com/flap/1688/280/image/2d1e642934186f79.jpg?q=50 1x",
 ];
 
 const slides = document.querySelector(".img-desktop");
@@ -50,7 +52,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const img = document.querySelectorAll(".pics");
   const nextBtn = document.querySelector(".next");
   const prevBtn = document.querySelector(".prev");
-  console.log(img);
+  console.log(img.length);
 
   img.forEach((item, index) => {
     item.style.left = `${index * 100}%`;
