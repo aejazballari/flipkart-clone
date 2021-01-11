@@ -250,7 +250,6 @@ h6 {
 
 .main {
   position: fixed;
-  /* overflow-y: auto; */
 }
 
 .show {
@@ -270,7 +269,7 @@ h6 {
 
 .burger-nav ul {
   height: 91vh;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .burger-nav a {
