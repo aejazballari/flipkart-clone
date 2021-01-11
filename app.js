@@ -1,15 +1,3 @@
-const burger = document.querySelector(".burger-container");
-const scroll = document.querySelector(".burger-nav ul");
-const nav = document.querySelector(".burger-nav");
-burger.addEventListener("click", () => {
-  nav.classList.add("show");
-  document.body.style.overflowY = "hidden";
-});
-
-// document.body.addEventListener("click", () => {
-//   nav.classList.remove("show");
-// });
-
 const catogories = [
   "https://rukminim1.flixcart.com/flap/198/186/image/570ea9.jpg?q=90",
   "https://rukminim1.flixcart.com/flap/198/186/image/54abb23755dc69db.jpg?q=90",
@@ -30,8 +18,23 @@ const slideImg = [
   "https://rukminim1.flixcart.com/flap/3376/560/image/2d1e642934186f79.jpg?q=50 2x, https://rukminim1.flixcart.com/flap/1688/280/image/2d1e642934186f79.jpg?q=50 1x",
 ];
 
+const burger = document.querySelector(".burger-container");
+const fix = document.querySelector("#fix");
+const mainPosition = document.querySelector(".main");
+const scrollNav = document.querySelector(".burger-nav ul");
+const nav = document.querySelector(".burger-nav");
 const slides = document.querySelector(".img-desktop");
 const mobileNav = document.querySelector(".mobile-nav");
+burger.addEventListener("click", () => {
+  nav.classList.add("show");
+  fix.classList.add("main");
+  scrollNav.style.overflowY = "scroll";
+});
+
+fix.addEventListener("click", () => {
+  nav.classList.remove("show");
+  fix.classList.remove("main");
+});
 
 window.addEventListener("DOMContentLoaded", () => {
   let displayNav = catogories.map((catogory) => {
@@ -52,7 +55,6 @@ window.addEventListener("DOMContentLoaded", () => {
   const img = document.querySelectorAll(".pics");
   const nextBtn = document.querySelector(".next");
   const prevBtn = document.querySelector(".prev");
-  console.log(img.length);
 
   img.forEach((item, index) => {
     item.style.left = `${index * 100}%`;
@@ -80,30 +82,3 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-// console.log(slides);
-
-// const img = document.querySelectorAll(".img-desktop");
-// const nextBtn = document.querySelector(".next");
-// const prevBtn = document.querySelector(".prev");
-
-// console.log(img);
-// img.forEach((item, index) => {
-//   item.style.left = `${index * 100}%`;
-// });
-// let counter = 0;
-// nextBtn.addEventListener("click", () => {
-//   counter++;
-//   console.log(carousel());
-// });
-
-// prevBtn.addEventListener("click", () => {
-//   counter--;
-//   carousel();
-// });
-
-// function carousel() {
-//   img.forEach((item) => {
-//     item.style.transform = `translateX(-${counter * 100}%)`;
-//   });
-// }
