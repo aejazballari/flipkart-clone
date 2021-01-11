@@ -28,7 +28,7 @@ const mobileNav = document.querySelector(".mobile-nav");
 burger.addEventListener("click", () => {
   nav.classList.add("show");
   fix.classList.add("main");
-  scrollNav.style.overflowY = "scroll";
+  //   scrollNav.style.overflowY = "scroll";
 });
 
 fix.addEventListener("click", () => {

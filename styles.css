@@ -246,6 +246,7 @@ h6 {
   transition: transform 0.5s ease-in;
   overflow-y: auto;
   z-index: 1;
+  padding-bottom: 40px;
 }
 
 .main {
@@ -265,11 +266,6 @@ h6 {
   align-items: center;
   padding: 0px 15px;
   color: white;
-}
-
-.burger-nav ul {
-  height: 91vh;
-  /* overflow-y: auto; */
 }
 
 .burger-nav a {
