@@ -25,10 +25,12 @@ const scrollNav = document.querySelector(".burger-nav ul");
 const nav = document.querySelector(".burger-nav");
 const slides = document.querySelector(".img-desktop");
 const mobileNav = document.querySelector(".mobile-nav");
+const timer = document.querySelector(".time-left p");
+
+// toggling burger button
 burger.addEventListener("click", () => {
   nav.classList.add("show");
   fix.classList.add("main");
-  //   scrollNav.style.overflowY = "scroll";
 });
 
 fix.addEventListener("click", () => {
@@ -36,6 +38,7 @@ fix.addEventListener("click", () => {
   fix.classList.remove("main");
 });
 
+// mobile categories section
 window.addEventListener("DOMContentLoaded", () => {
   let displayNav = catogories.map((catogory) => {
     return (mobileNav.innerHTML = `<img src=${catogory} alt="offer-zone">`);
@@ -44,6 +47,7 @@ window.addEventListener("DOMContentLoaded", () => {
   mobileNav.innerHTML = displayNav;
 });
 
+// image slider and its buttons
 window.addEventListener("DOMContentLoaded", () => {
   let displaySlide = slideImg.map((slide) => {
     return (slides.innerHTML = `
@@ -82,3 +86,18 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// countdown timer
+setInterval(function time() {
+  let d = new Date();
+  let hours = 24 - d.getHours();
+  let min = 60 - d.getMinutes();
+  if ((min + "").length == 1) {
+    min = "0" + min;
+  }
+  let sec = 60 - d.getSeconds();
+  if ((sec + "").length == 1) {
+    sec = "0" + sec;
+  }
+  timer.textContent = `${hours}  :  ${min}  :  ${sec} Left`;
+}, 1000);
